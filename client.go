@@ -5,11 +5,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"io"
 	"log"
 	"net/http"
 	"net/url"
+
+	"github.com/gorilla/websocket"
 )
 
 // Interface of Client for mocking data receiving in tests
@@ -161,7 +162,7 @@ func (client *WebClient) WaitTask(c *websocket.Conn, taskID string) (bool, error
 			Message string `json:"message,omitempty"`
 			Done    bool   `json:"done,omitempty"`
 			ID      string `json:"id,omitempty"`
-		} `json:"result,omitempty"`
+		} `json:"result,omitzero"`
 		Time string `json:"time,omitempty"`
 	}{}
 
