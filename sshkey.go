@@ -47,7 +47,7 @@ func (s *SSHKeyService) Remove(keyID int64) (bool, *http.Response, error) {
 	res, err := s.client.ExecuteRequest("DELETE", fmt.Sprint("sshkeys/", strconv.FormatInt(keyID, 10)), []byte{}, struct{}{})
 
 	if err != nil {
-		return false, res, nil
+		return false, res, err
 	}
 
 	return true, res, nil
