@@ -28,7 +28,7 @@ type Payments struct {
 		Price   int64  `json:"price,omitempty"`
 		State   int64  `json:"state,omitempty"`
 		Type    int64  `json:"type,omitempty"`
-	} `json:"items,omitempty"`
+	} `json:"items,omitzero"`
 	Status string `json:"status,omitempty"`
 }
 
@@ -36,23 +36,23 @@ type Consumption struct {
 	Huge struct {
 		Count int64 `json:"count,omitempty"`
 		Summ  int64 `json:"summ,omitempty"`
-	} `json:"huge,omitempty"`
+	} `json:"huge,omitzero"`
 	Large struct {
 		Count int64 `json:"count,omitempty"`
 		Summ  int64 `json:"summ,omitempty"`
-	} `json:"large,omitempty"`
+	} `json:"large,omitzero"`
 	Medium struct {
 		Count int64 `json:"count,omitempty"`
 		Summ  int64 `json:"summ,omitempty"`
-	} `json:"medium,omitempty"`
+	} `json:"medium,omitzero"`
 	Monster struct {
 		Count int64 `json:"count,omitempty"`
 		Summ  int64 `json:"summ,omitempty"`
-	} `json:"moster,omitempty"`
+	} `json:"moster,omitzero"`
 	Small struct {
 		Count int64 `json:"count,omitempty"`
 		Summ  int64 `json:"summ,omitempty"`
-	} `json:"small,omitempty"`
+	} `json:"small,omitzero"`
 	Summ int64 `json:"summ,omitempty"`
 }
 

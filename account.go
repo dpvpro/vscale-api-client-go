@@ -21,7 +21,7 @@ type Account struct {
 		Name       string `json:"name,omitempty"`
 		State      string `json:"state,omitempty"`
 		Surname    string `json:"surname,omitempty"`
-	} `json:"info,omitempty"`
+	} `json:"info,omitzero"`
 }
 
 func (a *AccountService) Get() (*Account, *http.Response, error) {
